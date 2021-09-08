@@ -6,6 +6,7 @@ namespace assignment0
     {
         public static void Main(string[] args)
         {
+
             //int input = Console.ReadLine();
             //if(isLeapYear){
                 
