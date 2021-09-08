@@ -6,11 +6,16 @@ namespace assignment0
     {
         public static void Main(string[] args)
         {
-
-            //int input = Console.ReadLine();
-            //if(isLeapYear){
-                
-            //}
+            var program = new Program();
+            Console.WriteLine("Please provide a year to see if it is a leap year. Confirm with [Enter]");
+            
+            String input = Console.ReadLine();
+            int year = Convert.ToInt32(input);
+            if(program.isLeapYear(year)){
+                Console.WriteLine("yay");
+            } else {
+                Console.WriteLine("nay");
+            }
         }
     
         public bool isLeapYear(int year){
