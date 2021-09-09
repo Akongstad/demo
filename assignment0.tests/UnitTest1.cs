@@ -20,7 +20,7 @@ namespace assignment0.tests
             */
             var program = new Program();
             var expected = true;
-            Assert.Equal(expected, program.isLeapYear(4));
+            Assert.Equal(expected, program.isLeapYear(1584));
             
             
         }
@@ -28,14 +28,14 @@ namespace assignment0.tests
         public void isLeapYear_checks_divide_100(){
             var program = new Program();
             var expected = false;
-            Assert.Equal(expected, program.isLeapYear(200));
+            Assert.Equal(expected, program.isLeapYear(1800));
         }
         [Fact]
         public void isLeapyear_checks_divide_400()
         {
             var program = new Program();
             var expected = true;
-            Assert.Equal(expected, program.isLeapYear(400));
+            Assert.Equal(expected, program.isLeapYear(1600));
         
         }
         [Fact]
@@ -44,6 +44,13 @@ namespace assignment0.tests
             var program = new Program();
             var expected = false;
             Assert.Equal(expected, program.isLeapYear(0));
+        }
+        [Fact]
+        public void IsLeapYear_checks_before_1582()
+        {
+            var program = new Program();
+            var expected = false;
+            Assert.Equal(expected, program.isLeapYear(400));
         }
     }
 }
